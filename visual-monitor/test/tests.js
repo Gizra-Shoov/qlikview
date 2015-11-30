@@ -64,7 +64,11 @@ describe('Visual monitor testing', function() {
       .webdrivercss(testName + '.homepage', {
         name: '1',
         exclude: [],
-        remove: [],
+        remove:
+          [
+            // News Block.
+            '.news_bg'
+          ],
         hide: [],
         screenWidth: selectedCaps == 'chrome' ? [640, 960, 1200] : undefined,
       }, resultsCallback)
